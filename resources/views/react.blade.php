@@ -7,6 +7,6 @@
     @inertiaHead
 </head>
 <body>
-@inertia
+@inertia('react')
 </body>
 </html>

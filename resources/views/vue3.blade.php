@@ -7,8 +7,6 @@
     @inertiaHead
 </head>
 <body>
-@inertia('react')
-@inertia('vue3')
-@inertia('svelte')
+    @inertia('vue3')
 </body>
 </html>

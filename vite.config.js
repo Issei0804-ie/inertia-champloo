@@ -25,14 +25,14 @@ export default defineConfig({
             refresh: true,
         }),
         vue(),
-        // react(),
-        // svelte({
-        //     preprocess: {
-        //         //@ts-ignore
-        //         script:async (options) => (await vitePreprocess).script(options),
-        //         //@ts-ignore
-        //         style:async (options) => (await vitePreprocess).style(options),
-        //     }
-        // })
+        react(),
+        svelte({
+            preprocess: {
+                //@ts-ignore
+                script:async (options) => (await vitePreprocess).script(options),
+                //@ts-ignore
+                style:async (options) => (await vitePreprocess).style(options),
+            }
+        })
     ],
 })

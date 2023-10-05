@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/vue', function () {
+Route::get('/vue3', function () {
+    \Inertia\Inertia::setRootView('vue3');
+    return \Inertia\Inertia::render('Hello');
+});
+
+Route::get('/react', function () {
+    \Inertia\Inertia::setRootView('react');
     return \Inertia\Inertia::render('Hello');
 });

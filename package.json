@@ -1,4 +1,5 @@
 {
+    "type": "module",
     "private": true,
     "scripts": {
         "dev": "vite",
@@ -6,6 +7,7 @@
     },
     "devDependencies": {
         "@inertiajs/inertia-react": "^0.8.1",
+        "@sveltejs/vite-plugin-svelte": "^2.4.6",
         "@vitejs/plugin-react": "^4.1.0",
         "@vitejs/plugin-vue": "^4.4.0",
         "axios": "^1.1.2",
@@ -15,9 +17,12 @@
     },
     "dependencies": {
         "@inertiajs/react": "^1.0.11",
+        "@inertiajs/svelte": "^1.0.11",
         "@inertiajs/vue3": "^1.0.11",
+        "@sveltejs/package": "^2.2.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "svelte": "^4.2.1",
         "vue": "^3.3.4"
     }
 }

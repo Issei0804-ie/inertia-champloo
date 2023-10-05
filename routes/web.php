@@ -22,3 +22,8 @@ Route::get('/react', function () {
     \Inertia\Inertia::setRootView('react');
     return \Inertia\Inertia::render('Hello');
 });
+
+Route::get('/svelte', function () {
+    \Inertia\Inertia::setRootView('svelte');
+    return \Inertia\Inertia::render('Hello');
+});

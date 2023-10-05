@@ -2,7 +2,8 @@ import {defineConfig} from 'vite'
 import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import react from "@vitejs/plugin-react";
-require('dotenv').config()
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+const vitePreprocess = import('@sveltejs/vite-plugin-svelte').then(m => m.vitePreprocess())
 
 const extendedViteDevServerOptions = {}
 
@@ -19,11 +20,19 @@ export default defineConfig({
         ...extendedViteDevServerOptions
     },
     plugins: [
-        laravel({
-            input: ['resources/js/vue3.js', 'resources/js/react.jsx'],
+        laravel.default({
+            input: ['resources/js/vue3.js', 'resources/js/react.jsx', 'resources/js/svelte.js'],
             refresh: true,
         }),
-        // vue(),
+        vue(),
         react(),
+        svelte({
+            preprocess: {
+                //@ts-ignore
+                script:async (options) => (await vitePreprocess).script(options),
+                //@ts-ignore
+                style:async (options) => (await vitePreprocess).style(options),
+            }
+        })
     ],
 })

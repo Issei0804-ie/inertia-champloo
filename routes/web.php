@@ -27,3 +27,8 @@ Route::get('/svelte', function () {
     \Inertia\Inertia::setRootView('svelte');
     return \Inertia\Inertia::render('Hello');
 });
+
+Route::get('/champloo', function () {
+    \Inertia\Inertia::setRootView('champloo');
+    return \Inertia\Inertia::render('Hello');
+});
